@@ -1,0 +1,12 @@
+application:
+  name: homepage
+  pods:
+  - name: app
+    image: ghcr.io/gethomepage/homepage:latest
+    path: /
+    servicePorts:
+    - 3000
+    volumes:
+    - name: homepage-config
+      mountPath: /app/config
+      size: 2Gi
